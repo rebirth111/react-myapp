@@ -1,4 +1,4 @@
-import {Route,Link,NavLink} from 'react-router-dom'
+/* import {Route,Link,NavLink} from 'react-router-dom'
 import { Redirect, Switch ,withRouter} from 'react-router-dom/cjs/react-router-dom.min';
 import './App.css';
 import Home from './components/Home'
@@ -29,4 +29,60 @@ function App(props) {
   );
 }
 
-export default withRouter(App);
+export default withRouter(App); */
+
+
+import React,{useState} from 'react'
+import './App.css';
+
+/* class App extends React.Component{
+  constructor(props){
+    super(props)
+    this.state={
+      text:"我是状态数据"
+    }
+  }
+  render(){
+    return(
+      <div>
+        hello-----{this.state.text}
+      </div>
+    )
+  }
+} */
+
+/*
+使用hook
+
+function App(props){
+  let [val,setVal]= useState(0)
+  return(
+    <div className="App">
+      <div>
+          使用数据:{val}
+          <button onClick={()=>{setVal(val+1)}}>点我进行数据修改</button>
+      </div>
+    </div>
+  )
+} */
+
+
+function App(props){
+  let [val,setVal]= useState({
+    vala:0,
+    valb:1,
+    valc:2
+  })
+  return(
+    <div className="App">
+      <div>
+          使用数据:{val.vala}----{val.valb}---{val.valc}
+          <button onClick={()=>{setVal(val+1)}}>点我进行数据修改</button>
+      </div>
+    </div>
+  )
+}
+
+
+
+export default App
