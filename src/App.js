@@ -34,6 +34,7 @@ export default withRouter(App); */
 
 import React,{useState} from 'react'
 import './App.css';
+import Home from './components/Home'
 
 /* class App extends React.Component{
   constructor(props){
@@ -67,7 +68,7 @@ function App(props){
 } */
 
 
-function App(props){
+/* function App(props){
   let [val,setVal]= useState({
     vala:0,
     valb:1,
@@ -81,8 +82,17 @@ function App(props){
       </div>
     </div>
   )
+} */
+
+function App(props){
+  return(
+    <div className="App">
+      <div>
+        hello
+        <Home />
+      </div>
+    </div>
+  )
 }
 
-
-
-export default App
+export default App 
